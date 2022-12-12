@@ -8,7 +8,5 @@
 sudo useradd sonar
 # 2. Grand sudo access to sonar user
 sudo echo "sonar ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/sonar
-sudo chown -R sonar:sonar /opt/sonarqube/
-sudo chmod -R 775 /opt/sonarqube/
-hostname sonar
+sudo hostnamectl set-hostname sonar
 sudo su - sonar
