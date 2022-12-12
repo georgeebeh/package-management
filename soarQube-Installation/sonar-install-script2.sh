@@ -22,6 +22,8 @@ sudo mv sonarqube-7.8 sonarqube
 
 # start sonarqube as sonar user using relative path
 sudo su - sonar  
+sudo chown -R sonar:sonar /opt/sonarqube/
+sudo chmod -R 775 /opt/sonarqube/
 cd /opt/sonarqube/bin/linux-x86-64/ 
 sh sonar.sh start
 # or start sonarqube as sonar user using absolute path
