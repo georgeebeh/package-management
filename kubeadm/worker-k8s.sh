@@ -99,6 +99,6 @@ systemctl enable kubelet.service
 #Copy kubeadm join token from the master and execute in Worker Nodes to join to cluster
 # replace this token with yours
 
-kubeadm join 10.0.0.11:6443 --token 03em5o.agjpy9wbj98izbpn \
-        --discovery-token-ca-cert-hash sha256:92a1cf1e452961a550f05eff32f25500fc9bcfd5d5f771689e8ee21b6a0da243
+kubeadm join 172.31.27.40:6443 --token pbuneq.4mi70jpalpxj2pcw \
+        --discovery-token-ca-cert-hash sha256:422f0882ac195d560e48d21eed1b6aa2c9fb6ad32a96a903d824d42cb63ccbd1
 
