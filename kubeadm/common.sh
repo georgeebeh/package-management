@@ -39,7 +39,7 @@ apt-get install ca-certificates curl gnupg lsb-release -y
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
-#Use follwing command to set up the repository:
+#Use following command to set up the repository:
 
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
@@ -96,5 +96,6 @@ systemctl daemon-reload
 systemctl start kubelet
 systemctl enable kubelet.service
 
-sudo kubeadm join 10.0.0.6:6443 --token xmzufh.e0nu3kb5ohijfxyh \
-        --discovery-token-ca-cert-hash sha256:579b6a53bd00c8483f5150b9fb521b6431fc38b1ac716b8b9a5f668928a93771
+kubeadm join 172.31.30.158:6443 --token p7atz3.a6dqz2shiprk3zt2 \
+        --discovery-token-ca-cert-hash sha256:efade082c2ec80a49ca0bc4c5d21f924264c506e00b553a6de25820669337151
+
